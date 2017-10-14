@@ -94,6 +94,9 @@
     layout_constraintEnd_toStartOf
     layout_constraintEnd_toEndOf
 
+    Ratio:
+    layout_constraintDimensionRatio
+
     Margins when connected to a GONE widget:
     layout_goneMarginStart
     layout_goneMarginEnd
