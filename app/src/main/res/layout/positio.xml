@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- 4:3 ratio -->
     <ImageView
         android:id="@+id/listingImageView"
-        android:layout_width="96dp"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -60,60 +59,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/descriptionTextView"
-        android:text="What! Button, Why "
-        app:layout_constraintLeft_toRightOf="@+id/listingImageView"
+        android:layout_marginLeft="16dp"
+        android:text="Button"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listingImageView"/>
 
     <Button
-        android:id="@+id/b1"
+        android:id="@+id/button_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:text="b1111"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_0"/>
-
-    <Button
-        android:id="@+id/b2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="106dp"
-        android:layout_marginStart="106dp"
-        android:text="b22222"
-        app:layout_constraintLeft_toRightOf="@id/b1"
-        app:layout_constraintTop_toBottomOf="@id/button_0"
+        android:layout_alignLeft="@id/descriptionTextView"
+        android:layout_marginLeft="40dp"
+        android:text="What"
+        app:layout_constraintLeft_toRightOf="@+id/button_0"
+        app:layout_constraintTop_toBottomOf="@+id/listingImageView"
         app:layout_goneMarginLeft="16dp"/>
 
-    <Button
-        android:id="@+id/button_1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button_2"/>
-
-    <Button
-        android:id="@+id/button_2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toRightOf="@+id/button_1"
-        app:layout_constraintRight_toLeftOf="@+id/button_3"/>
-
-    <Button
-        android:id="@+id/button_3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintLeft_toRightOf="@+id/button_2"
-        app:layout_constraintRight_toRightOf="parent"/>
-
 </android.support.constraint.ConstraintLayout>
+
+    <!--
+    Relative positioning:
+    layout_constraintLeft_toLeftOf
+    layout_constraintLeft_toRightOf
+    layout_constraintRight_toLeftOf
+    layout_constraintRight_toRightOf
+    layout_constraintTop_toTopOf
+    layout_constraintTop_toBottomOf
+    layout_constraintBottom_toTopOf
+    layout_constraintBottom_toBottomOf
+    layout_constraintBaseline_toBaselineOf
+    layout_constraintStart_toEndOf
+    layout_constraintStart_toStartOf
+    layout_constraintEnd_toStartOf
+    layout_constraintEnd_toEndOf
+
+    Margins when connected to a GONE widget:
+    layout_goneMarginStart
+    layout_goneMarginEnd
+    layout_goneMarginLeft
+    layout_goneMarginTop
+    layout_goneMarginRight
+    layout_goneMarginBottom
+    -->
