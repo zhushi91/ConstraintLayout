@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         //dev test
         //v1.0 test
+        //v2.0 test
         switch (v.getId()) {
             case R.id.applyButton:
                 onApplyClick(v);
