@@ -76,6 +76,13 @@
         app:layout_constraintTop_toBottomOf="@+id/listingImageView"
         app:layout_goneMarginLeft="16dp"/>
 
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
 </android.support.constraint.ConstraintLayout>
 
     <!--
@@ -104,4 +111,8 @@
     layout_goneMarginTop
     layout_goneMarginRight
     layout_goneMarginBottom
+
+    Important:
+    MATCH_PARENT is not recommended for widgets contained in a ConstraintLayout.
+    Similar behavior can be defined by using MATCH_CONSTRAINT with the corresponding left/right or top/bottom constraints being set to "parent"
     -->

@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        //dev test
         switch (v.getId()) {
             case R.id.applyButton:
                 onApplyClick(v);
