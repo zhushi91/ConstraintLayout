@@ -1,119 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:fillViewport="true">
 
-    <!-- 4:3 ratio -->
-    <ImageView
-        android:id="@+id/listingImageView"
-        android:layout_width="96dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:scaleType="centerCrop"
-        android:src="@mipmap/bg_cash"
-        app:layout_constraintDimensionRatio="4:3"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="16dp"
-        android:layout_toRightOf="@id/listingImageView"
-        android:lines="1"
-        android:text="Hey I am title"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toRightOf="@+id/listingImageView"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <!--charter_line-->
+        <com.geometry.constraintlayout.lib.CharterLine
+            android:id="@+id/charter_line"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"/>
 
-    <TextView
-        android:id="@+id/descriptionTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/titleTextView"
-        android:layout_marginEnd="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_toRightOf="@id/listingImageView"
-        android:ellipsize="end"
-        android:lines="2"
-        android:text="Hey I am description. Yes I am description. Believe on me I am description."
-        android:textSize="16sp"
-        app:layout_constraintLeft_toRightOf="@+id/listingImageView"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView"/>
+        <!--charter_bar-->
+        <com.geometry.constraintlayout.lib.CharterBar
+            android:id="@+id/charter_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"/>
 
-    <Button
-        android:id="@+id/button_0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/descriptionTextView"
-        android:text="What! Button, Why "
-        app:layout_constraintLeft_toRightOf="@+id/listingImageView"
-        app:layout_constraintTop_toBottomOf="@+id/listingImageView"/>
+        <!--charter_bar_no_margin-->
+        <com.geometry.constraintlayout.lib.CharterBar
+            android:id="@+id/charter_bar_no_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"/>
 
-    <Button
-        android:id="@+id/b1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:text="b1111"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_0"/>
+        <!--charter_line_XLabel-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/b2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="106dp"
-        android:layout_marginStart="106dp"
-        android:text="b22222"
-        app:layout_constraintLeft_toRightOf="@id/b1"
-        app:layout_constraintTop_toBottomOf="@id/button_0"
-        app:layout_goneMarginLeft="16dp"/>
+            <com.geometry.constraintlayout.lib.CharterLine
+                android:id="@+id/charter_line_with_XLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"/>
 
-    <Button
-        android:id="@+id/button_1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button_2"/>
+            <com.geometry.constraintlayout.lib.CharterXLabels
+                android:id="@+id/charter_line_XLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button_2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toRightOf="@+id/button_1"
-        app:layout_constraintRight_toLeftOf="@+id/button_3"/>
+        <!--charter_bar_XLabel-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button_3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintLeft_toRightOf="@+id/button_2"
-        app:layout_constraintRight_toRightOf="parent"/>
+            <com.geometry.constraintlayout.lib.CharterBar
+                android:id="@+id/charter_bar_with_XLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"/>
 
-</android.support.constraint.ConstraintLayout>
+            <com.geometry.constraintlayout.lib.CharterXLabels
+                android:id="@+id/charter_bar_XLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+
+        <!--charter_line_YLabel-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <com.geometry.constraintlayout.lib.CharterYLabels
+                android:id="@+id/charter_line_YLabel"
+                android:layout_width="20dp"
+                android:layout_height="100dp"/>
+
+            <com.geometry.constraintlayout.lib.CharterLine
+                android:id="@+id/charter_line_with_YLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"/>
+        </LinearLayout>
+
+        <!--charter_bar_YLabel-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <com.geometry.constraintlayout.lib.CharterYLabels
+                android:id="@+id/charter_bar_YLabel"
+                android:layout_width="20dp"
+                android:layout_height="100dp"/>
+
+            <com.geometry.constraintlayout.lib.CharterBar
+                android:id="@+id/charter_bar_with_YLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"/>
+        </LinearLayout>
+
+        <!--charter_line_XMarker-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <com.geometry.constraintlayout.lib.CharterLine
+                android:id="@+id/charter_line_with_XMarker"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"/>
+
+            <com.geometry.constraintlayout.lib.CharterXMarkers
+                android:id="@+id/charter_line_XMarker"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+
+        <!--charter_bar_XMarker-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <com.geometry.constraintlayout.lib.CharterBar
+                android:id="@+id/charter_bar_with_XMarker"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"/>
+
+            <com.geometry.constraintlayout.lib.CharterXMarkers
+                android:id="@+id/charter_bar_XMarker"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+
+        <!--charter_line_YMarker-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <com.geometry.constraintlayout.lib.CharterYMarkers
+                android:id="@+id/charter_line_YMarker"
+                android:layout_width="20dp"
+                android:layout_height="100dp"/>
+
+            <com.geometry.constraintlayout.lib.CharterLine
+                android:id="@+id/charter_line_with_YMarker"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"/>
+        </LinearLayout>
+
+        <!--charter_bar_YMarker-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <com.geometry.constraintlayout.lib.CharterYMarkers
+                android:id="@+id/charter_bar_YMarker"
+                android:layout_width="20dp"
+                android:layout_height="100dp"/>
+
+            <com.geometry.constraintlayout.lib.CharterBar
+                android:id="@+id/charter_bar_with_YMarker"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
